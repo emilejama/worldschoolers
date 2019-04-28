@@ -80,7 +80,18 @@ padding: 20px;
  .search-container form button {
  padding: 6px;
  }
+.login-logo-size {
+width: 100%; height: auto
+}
 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
 
 @media screen and (max-width: 600px) {
@@ -139,6 +150,14 @@ vertical-align: middle;
  .search-container form button {
  padding: 10px;
  }
+ .login-logo {
+ text-align: center;
+ background-color: #333;
+ }
+ .login-logo-size {
+width: 500px; height: 300px;
+
+}
  }
  
  
