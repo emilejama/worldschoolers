@@ -175,7 +175,7 @@ vertical-align: middle;
 /* kai useris ant zemelapio uzhoverintas patodo tik maza kvadratuka su truputi info, o kai paklikintas tai pasidaro mapas 50% ir salia atsiranda profilis to zmogaus. jei nori atsidaryt
  *  galima profili kitame lange tada buna profilis tokio 50% vistiek bet per puslapio centra.*/
 #googleMap {
- width:100%;
+ width:50%;
  height:700px;
  
  }
@@ -202,7 +202,6 @@ width: 550px; height: 300px;
  @media screen and (min-width: 2000px) {
  
  #googleMap {
- width:100%;
  height:1000px;
  }
  }
