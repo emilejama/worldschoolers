@@ -120,10 +120,14 @@ width: 100%; height: auto
 .userprofile-btn:hover, a:hover {
   opacity: 0.7;
 }
- 
- 
- 
- 
+ .user-profile-img {
+ width: 100%;
+ height: auto;
+ }
+ .user-profile {
+ margin-top: 20px;
+ }
+
  
  
 
@@ -177,7 +181,7 @@ vertical-align: middle;
 #googleMap {
  width:50%;
  height:700px;
- 
+
  }
  .search-container form input {
  padding: 10px;
@@ -192,6 +196,12 @@ vertical-align: middle;
  }
  .login-logo-size {
 width: 550px; height: 300px;
+
+}
+.user-profile-img {
+display: inline;
+width: 30%;
+height:auto;
 
 }
 
