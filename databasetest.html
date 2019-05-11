@@ -20,13 +20,14 @@
       <input type="password" placeholder="Enter Password" name="psw" required  id="password_field">
       <button onClick="login()">log in</button>
       <button onclick="create_account()">Create a new account</button>
+      <button onclick="forgot_password()">Forgot password</button>
 	</div>
 	
 	<div id="user_div" class="loggedin-div">
 		<h3>welcome user</h3>
 		<p id="user_para">you are logged in</p>
 		<button onClick="logout()">logout</button>
-		 <button onclick="send_verification()">Send verification</button>
+		 <button id="verify_btn" onclick="send_verification()">Send verification</button>
 	</div>
 	
 	
