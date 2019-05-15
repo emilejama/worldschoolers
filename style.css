@@ -22,6 +22,7 @@ body {
   background-color: #ddd;
   color: black;
 }
+#profilius{display:none;}
 
 .active {
   background-color: #4CAF50;
