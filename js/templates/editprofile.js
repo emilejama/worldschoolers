@@ -1,124 +1,76 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <meta charset="utf-8">
+var editprofiletemplate = `
 
-    <title>Places Search Box</title>
-    <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      #map {
-        height: 100%;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-      #description {
-        font-family: Roboto;
-        font-size: 15px;
-        font-weight: 300;
-      }
+<div class="user-profile" >
+	           <img src="img/europe.jpg"  class="responsive europe user-profile-img" href="region/europe.htm" > 
+	           <p>Upload picture</p>
+<form action="/action_page.php">
+  Select a file: <input type="file" name="myFile"><br><br>
+ 
+</form>
+               <div class="user-profile-info" >
+					<label for="username"><b>User Name</b></label>
+                   <input type="username" placeholder="Enter User Name" name="username" required>
+                   
+					<div class="location-markers">
+									<label for="location"><b>Location</b></label>
+									<input type="location" id="pac-input" placeholder="Enter Location" name="location">
+									<p><button>Save</button></p>
+									 <div id="map" style=" width:30%;
+									 height:400px;
+									"></div>
+									
+									
+									<div class="location-history-dropbar ">
+												<p>Location history: </p>
+												<p>recent places: </p>
+									<div class="all-locations"> 
+												<ul>
+														<li> Vilnius, 20 sep 2019</li>
+														<li> London, 20 sep 2019</li>
+														<li> italy, 20 sep 2019</li>
+												</ul>
+									</div>
+									<button>showmore/less</button>
+									</div>
+									<label>
+        <input type="checkbox" checked="checked" name="show/hide" style="margin-bottom:10px"> Hide recent places
+      </label>
+					</div>
+					
+					<div class="description">
+							<p>Description:<p>
+							<textarea rows="10" cols="50" maxlength="400">
+Enter text here...</textarea>
+							
+					</div>
+			</div>	
+			
+			<div class="contacts">
+					<label for="sociallinks"><b>Add links</b></label>
+					   <input id="twitter" type="sociallinks" placeholder="Enter Twitter link" name="sociallinks" >
+					  </i><input id="linkedin" type="sociallinks" placeholder="Enter Linkedin link" name="sociallinks" >
+					   </i><input id="facebook" type="sociallinks" placeholder="Enter Facebook link" name="sociallinks" >
+			</div> 
+			
+					<form class="social-icons-input">
+						<a href="#"><i class="fa fa-twitter"></i></a>
+						<a href="#"><i class="fa fa-linkedin"></i></a>
+						<a href="#"><i class="fa fa-facebook"></i></a>
+								
+					</form>
+					
 
-      #infowindow-content .title {
-        font-weight: bold;
-      }
-
-      #infowindow-content {
-        display: none;
-      }
-
-      #map #infowindow-content {
-        display: inline;
-      }
-
-      .pac-card {
-        margin: 10px 10px 0 0;
-        border-radius: 2px 0 0 2px;
-        box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        outline: none;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-        background-color: #fff;
-        font-family: Roboto;
-      }
-
-      #pac-container {
-        padding-bottom: 12px;
-        margin-right: 12px;
-      }
-
-      .pac-controls {
-        display: inline-block;
-        padding: 5px 11px;
-      }
-
-      .pac-controls label {
-        font-family: Roboto;
-        font-size: 13px;
-        font-weight: 300;
-      }
-      .search {
-text-align:center;
-}
-search-container form{
- text-align: center;
-padding: 20px;
- }
- .search-container form input {
- padding: 6px;
- }
- .search-container form button {
- padding: 6px;
- }
-
-    
-
-      
-
-      #title {
-        color: #fff;
-        background-color: #4d90fe;
-        font-size: 25px;
-        font-weight: 500;
-        padding: 6px 12px;
-      }
-      #target {
-        width: 345px;
-      }
-    </style>
-  </head>
-  <body>
-	  
-	  
-		<div class="topnav" id="myTopnav">
-  <a href="#home" class="logo" style="padding:0;"><img src="img/logoframe.png" style="width: 80px; height: 80px;"></a>
-  <a href="index.html"class="active">Map</a>
-  <a href="discovery.html">Discovery</a>
-  <a href="#contact">Worldschoolers Hubs</a>
-  <a href="#contact">Events & Meet-ups</a>
-   <a href="myprofile.html">My profile</a>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
+<p><button>Save</button></p>
+							<input type="submit" value="Submit">
+	
 </div>
-	  
-	  <div class="search-container">
-    <form action="/action_page.php">
-      <input id="pac-input" class="controls" type="text" placeholder="Search.." name="search">
-      <!--<button type="submit">Search &#128269;</button>-->
-    </form>
-  </div>
-	  
-	  
 
-    <div id="map" style=" width:50%;
- height:700px;
-"></div>
-    <script>
+
+
+
+							
+									
+<script>
       // This example adds a search box to a map, using the Google Place Autocomplete
       // feature. People can enter geographical searches. The search box will return a
       // pick list containing a mix of places and predicted search terms.
@@ -197,5 +149,9 @@ padding: 20px;
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUPsVJQgLHBRrdpL94Bn3RI7ZnHYgVg68&libraries=places&callback=initAutocomplete"
          async defer></script>
-  </body>
-</html>
+
+
+
+
+
+`;

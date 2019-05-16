@@ -85,6 +85,6 @@ var map = new google.maps.Map(document.getElementById("map"),mapProp);
 }
 </script>
 
-<script src="https://maps.googleapis.com/maps/api/js?key= &callback=myMap"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=&callback=myMap"></script>
 
 `;
