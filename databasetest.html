@@ -14,13 +14,32 @@
 </head>
 
 <body>
+	<div class="logo">
 	
+	</div>
+	
+	<div class="login-page-header">
+	<p>Welcome to <a class="button" href="#popup1">Homeschoolers Worldwide</a>! Log in or Register your account to find like-minded people in all parts of the planet Earth!</p>
+	</div>
+
+<div id="popup1" class="overlay">
+	<div class="popup">
+		<h3>What's that?</h3>
+		<a class="close" href="#">&times;</a>
+		<div class="content">
+			Homeschoolers Worldwide is a map based platform for all the homeschoolers, worldschoolers, unschoolers and traveling families as well as traveling teachers to help find each other, to create a lifelong friendships and to make a homeschooling journey even more interesting.<hr> This is a beta version of this app so more features and functionality is in development process. Stay tuned! 
+		</div>
+	</div>
+</div>
+
+
+
 	<div id="login_div" class="main-div">
-      <input type="text" placeholder="Enter Email" name="email" required id="email_field">
-      <input type="password" placeholder="Enter Password" name="psw" required  id="password_field">
-      <button onClick="login()">log in</button>
-      <button onclick="create_account()">Create a new account</button>
-      <button onclick="forgot_password()">Forgot password</button>
+      <input class="main-div-item email-input" type="text" placeholder="Enter Email" name="email" required id="email_field">
+      <input class="main-div-item pass-input" type="password" placeholder="Enter Password" name="psw" required  id="password_field">
+      <button class="main-div-item login-btn" onClick="login()">Log in</button>
+      <button class="main-div-item createaccount-btn" onclick="create_account()">Create a new account</button>
+      <button class="main-div-item forgotpass-btn" onclick="forgot_password()">Forgot password?</button>
 	</div>
 	
 	<div id="user_div" class="loggedin-div">
@@ -33,7 +52,9 @@
 	<div id="profilius">
 	tests
 	</div>
-	
+	<div id="edit-profile">
+		test
+	</div>
 	
 	<script src="https://www.gstatic.com/firebasejs/5.11.1/firebase.js"></script>
 <script>
@@ -50,6 +71,7 @@
 </script>
 <script src="js/index.js"></script>
 <script src="js/templates/profile.js"></script>
+<script src="js/templates/editprofile.js"></script>
 	
 </body>
 </html>

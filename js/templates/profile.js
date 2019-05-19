@@ -67,7 +67,7 @@ var myprofiletemplate = `
 	
 </div>
 <div>
-	<button><a href="edit-myprofile.html">Edit</a></button>
+	<button onclick="editProfile()">Edit</button>
 </div>
 
 

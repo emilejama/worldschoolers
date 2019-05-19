@@ -195,12 +195,11 @@ function writeUserData(userId, name, email, imageUrl) {
     picture : imageUrl
   });
 }
-/////////////nepavyksta padaryt edit profile
-/*function editProfile() {
-	var editprofiletemplate;
-  document.getElementById("demo").innerHTML = "editprofiletemplate";
+/////////////edit profile
+function editProfile() {
+  document.getElementById("edit-profile").innerHTML = editprofiletemplate;
   console.log('spelioju');
-  document.getElementById("demo").style.display = "block";
+  document.getElementById("edit-profile").style.display = "block";
   console.log('spelioju');
 }
-*/
+
