@@ -11,6 +11,7 @@
 	
 //}
 
+
 var uid = null;
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
@@ -169,32 +170,46 @@ function send_verification() {
 	
 }
 	
-/*	
-	  console.log('stR GGalen',firebase.auth());
 
-var userId = firebase.auth().currentUser.uid;
-var sttus = firebase.database().ref('/users/' + userId).once('value').then(function(snapshot) {
-  var username = (snapshot.val() && snapshot.val().username) || 'Anonymous';
-  //console.log('GGalen',username);
-});
- console.log('stR GGalen',sttus);
-
-*/
 
 
 ///////////////BANDAU GAUT USERIO PROFILI
 
 
 // Get a reference to the database service
-var database = firebase.database();
 
-function writeUserData(userId, name, email, imageUrl) {
+var initialInput; 
+var submitButton;
+var database; 
+
+
+
+function setup() {
+	initialInput = createInput('initials');
+	submitButton = createButton('submit');
+	submitButton.mousePressed('submitScore')
+	
+}
+
+function submitScore() {
+	var data = {
+		initials = initialInput.value(),
+		score: score
+		
+	}
+	
+var ref = database.ref('scores');
+ 
+ ref.push(data);
+
+}
+/*function writeUserData(userId, name, email, imageUrl) {
   firebase.database().ref('users/' + userId).set({
     address: name,
     email: email,
     picture : imageUrl
   });
-}
+}*/
 /////////////edit profile
 function editProfile() {
   document.getElementById("edit-profile").innerHTML = editprofiletemplate;
@@ -202,4 +217,5 @@ function editProfile() {
   document.getElementById("edit-profile").style.display = "block";
   console.log('spelioju');
 }
+
 

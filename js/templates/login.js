@@ -1,20 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Worldschoolers map</title>
- <meta charset="UTF-8">
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-  <meta name="author" content="Emile Jama">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" type="text/css" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+var logintemplate = `
 
-</head>
-
-<body>
-		<div class="desktop-intro">
+<div class="desktop-intro">
 	<div class="logo">
 	<img class="logo-img" src="img/logo-vivaldi.png">
 	</div>
@@ -52,32 +39,6 @@
 		<button onClick="logout()">logout</button>
 		 <button id="verify_btn" onclick="send_verification()">Send verification</button>
 	</div>
-	
-	<div id="profilius">
-	tests
-	</div>
-	<div id="edit-profile">
-		test
-	</div>
-	
-	<script src="https://www.gstatic.com/firebasejs/5.11.1/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "",
-    authDomain: "worldschoolers-1556417648836.firebaseapp.com",
-    databaseURL: "https://worldschoolers-1556417648836.firebaseio.com",
-    projectId: "worldschoolers-1556417648836",
-    storageBucket: "worldschoolers-1556417648836.appspot.com",
-    messagingSenderId: "361556651392"
-  };
-  firebase.initializeApp(config);
-  
-  database = firebase.database();
-</script>
-<script src="js/index.js"></script>
-<script src="js/templates/profile.js"></script>
-<script src="js/templates/editprofile.js"></script>
-	
-</body>
-</html>
+
+
+`

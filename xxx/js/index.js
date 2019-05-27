@@ -24,8 +24,8 @@ function selectMenu(menu_id){
 }
 
 function loadJSFile(filename){
-	if(	
-	iloadjscssfile("js/"+filename+".js");
+		
+	loadjscssfile("js/"+filename+".js");
 }
 function showMenu(){
 	var menu = [ 
@@ -34,12 +34,21 @@ function showMenu(){
 		"content_3"
 	];
 	var menu_out = "";
+	var initContent = "";
 	for(item in menu){
-		console.log("jungiam duombaze",item,menu[item]);
+		console.log(item,"jungiam duombaze",item,menu[item]);
 		menu_out += "<div id=\""+menu[item]+"\" onclick=\"selectMenu('"+menu[item]+"')\">"+menu[item]+"</div>";
+		loadJSFile(menu[item]);
+		if(item === '0'){
+					}
 	}
 	var menu_el = document.getElementById("main_menu");
+	var content_el = document.getElementById("main_content");
 	menu_el.innerHTML = menu_out;
+	initContent = window[menu[0]];
+	console.log('init', initContent);
+
+	content_el.innerHTML = initContent;
 	console.log("ole",menu,menu_el);
 	//.innerHTML = menu;
 }
@@ -61,4 +70,5 @@ function loadjscssfile(filename, filetype){
 }
 
 showMenu();
+
 console.log("started!");

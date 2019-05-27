@@ -147,7 +147,7 @@ Enter text here...</textarea>
       }
 
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=&callback=initAutocomplete"
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUPsVJQgLHBRrdpL94Bn3RI7ZnHYgVg68&libraries=places&callback=initAutocomplete"
          async defer></script>
 
 
