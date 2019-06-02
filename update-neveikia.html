@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+	
+	
+  </head>
+  <body>
+<!--
+<div id="message"></div>
+		<h2>Welcome</h2>
+		<p>Success</p>
+		<a target="_blank" href="">hosting documentation</a>
+</div>
+
+<p id="load">firebase sdk loading&hellip;</p>    
+-->
+
+
+
+<button onClick="googleLogin()">
+Login with google
+</button>
+
+    <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="update-neveikia.js" type="text/javascript"></script>
+    
+    <!--
+    <script>
+     document.addEventListener('DOMContentLoaded', function() {
+		 
+		 try {
+			 let app = firebase.app();
+			 let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function()')
+			 document.getElementById('load').innerHTML = 'fiebase sdk loaded with ${fetures.join(', ')}';
+		} catch (e)	{ 
+			console.error(e);
+			document.getElementById('load').innerHTML = 'error	loading sdk, check the console.';
+		}
+	});		
+			
+    </script> -->
+  </body>
+</html>

@@ -14,7 +14,7 @@ var database;
 function setup() {
 
   var config = {
-    apiKey: "",
+    apiKey: "AIzaSyDUPsVJQgLHBRrdpL94Bn3RI7ZnHYgVg68",
     authDomain: "worldschoolers-1556417648836.firebaseapp.com",
     databaseURL: "https://worldschoolers-1556417648836.firebaseio.com",
     projectId: "worldschoolers-1556417648836",
@@ -55,6 +55,7 @@ function gotData(data) {
   var fruits = data.val();
   // Grab all the keys to iterate over the object
   var keys = Object.keys(fruits);
+  
 
   // clear previous HTML list
   clearList();

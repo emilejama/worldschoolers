@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Firebase 1</title>
+
+	
+    <style>
+      body {
+        padding: 20px;
+      }
+      label.upload-group {
+		  width: 100px;
+		  height:40px;
+		  color: white;
+		  padding: 5 5 5 5;
+		  text-align: center;
+		  background-image: linear-gradient(to bottom,#337ab7 0,#265a88 100%);
+	  }
+	  input#file {
+		  width: 0.1px;
+		  height: 0.1px;
+		  position: absolute;
+		  z-index: -1;
+	  }
+    </style>
+
+  </head>
+  <body>
+
+    <h1>Parse Saving and Getting Data</h1>
+
+    <p>This page sends and retrieves data from <a href="http://firebase.com">Firebase</a>.
+
+    <p>
+      User name: <input value="" id="username"></input><br/>
+      Description: <input value="" id="description"></input><br/><br/>
+      Location: <input value="" id="location"></input><br/><br/>
+      <button id="submit" >submit</button>
+    </p>
+	
+	<h2>upload image</h2>
+	<input type="text" id="imageCaption" placeholder="Write a Caption">
+	<label class="upload-group" id="upload">
+		upload file
+		<input type="file" class="upload-group" id="file">
+		
+	</label>
+	<button type= "button" class="btn" id="uploadButton" onClick="uploadFile()">SUBMIT</button>
+	
+    <p id="data" ></p>
+
+
+    <script src="libraries/p5.js" type="text/javascript"></script>
+
+    <script src="libraries/p5.dom.js" type="text/javascript"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="myprofille_test.js" type="text/javascript"></script>
+  </body>
+</html>
